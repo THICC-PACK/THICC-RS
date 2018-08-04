@@ -56,12 +56,12 @@ static Matrix* identity(int size){
 //more actual magic
 
 //Return number of rows in Matrix
-int getRows(Matrix* matrixPassed){
+static int getRows(Matrix* matrixPassed){
 	return matrixPassed->rows;
 }
 
 //Return number of columns in Matrix
-int getCols(Matrix* matrixPassed){
+static int getCols(Matrix* matrixPassed){
 	return matrixPassed->cols;
 }
 

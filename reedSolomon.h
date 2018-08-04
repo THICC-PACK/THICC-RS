@@ -1,10 +1,9 @@
+/*
 //Reed-Solomon Coding over 8-bit values
 //
 //
 //
-//
-//
-//(c) 2018, Jeffrey Takahashi
+*/
 
 struct reedSolomon{
 	const int dataShardCount;
@@ -17,5 +16,3 @@ struct reedSolomon{
 	//byte array to allow for efficient access while encoding
 	const char parityRows[][];
 }
-
-

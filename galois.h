@@ -1,43 +1,43 @@
 /*
-  8-bit Galois field
-  Copyright 2018, Jeffrey Takahashi
+//8-bit Galois field
+//Copyright 2018, Jeffrey Takahashi
 */
 
 /*
-  8-bit Galois Field
+//8-bit Galois Field
 
-  Thisimplements multiplication, division, addition,
-  subtraction, and exponentiation.
+//Thisimplements multiplication, division, addition,
+//subtraction, and exponentiation.
 
-  See notes in original Backblaze, Inc. docs
+//See notes in original Backblaze, Inc. docs
 */
 
 /*
-  Number of elements in the field
+//Number of elements in the field
 */
 static int field_size = 256;
 
 /*
-  The polynomial used to generate the log table.
+//The polynomial used to generate the log table.
 
-  There are several polynomials that work to generate
-  a Galois field of 256 elements. The choice is
-  arbitrary and we just use the first one.
+//There are several polynomials that work to generate
+//a Galois field of 256 elements. The choice is
+//arbitrary and we just use the first one.
 
-  The possibilities are 29, 43, 45, 77, 95, 99, 101,
-  105, 113, 135, 141, 169, 195, 207, 231, and 245.
+//The possibilities are 29, 43, 45, 77, 95, 99, 101,
+//105, 113, 135, 141, 169, 195, 207, 231, and 245.
 */
 static int generating_polynomial = 29;
 /*
-  Mapping from members of the Galois Field to their integer logarithims.
-  The entry for 0 is meaningless because there is no log of 0.
+//Mapping from members of the Galois Field to their integer logarithims.
+//The entry for 0 is meaningless because there is no log of 0.
 
-  This array is int16, not byte (matrix) so that they can be used directly
-  to index arrays without casting. The values (except the non-value at
-  index 0) are all really bytes (???) so they range from 0 to 255.
+//This array is int16, not byte (matrix) so that they can be used directly
+//to index arrays without casting. The values (except the non-value at
+//index 0) are all really bytes (???) so they range from 0 to 255.
 
-  This table was copied from Backblaze, Inc. who generated it with
-  java_tables.py.
+//This table was copied from Backblaze, Inc. who generated it with
+//java_tables.py.
 */
 static int16_t log_table[] = {
 	-1,    0,    1,   25,    2,   50,   26,  198,
@@ -72,14 +72,14 @@ static int16_t log_table[] = {
 	11,  245,   22,  235,  122,  117,   44,  215,
 	79,  174,  213,  233,  230,  231,  173,  232,
 	116,  214,  244,  234,  168,   80,   88,  175
-	};
+};
 
 /*
-  Inverse of log table: maps integer logarithims to members of the
-  field. There is no entry for 255 because the highest log is 254
+//Inverse of log table: maps integer logarithims to members of the
+//field. There is no entry for 255 because the highest log is 254
 
-  This table copied from Backblaze, Inc. who generated it from 
-  java_tables.py
+//This table copied from Backblaze, Inc. who generated it from 
+//java_tables.py
 */
 static short uint8_t exp_table[] = {
 	1,    2,    4,    8,   16,   32,   64, -128,
@@ -148,14 +148,15 @@ static short uint8_t exp_table[] = {
 	-9,  -13,   -5,  -21,  -53, -117,   11,   22,
 	44,   88,  -80,  125,   -6,  -23,  -49, -125,
 	27,   54,  108,  -40,  -83,   71, -114
-	};
+};
 
 /*
-  Multiplication table for a Galois field.
+//Multiplication table for a Galois field.
 
-  Usng this table is an alternative to using the multiply()
-  function which uses log/exp table lookups.
+//Usng this table is an alternative to using the multiply()
+//function which uses log/exp table lookups.
 */
+
 //static byte[][] multiplication_table = generateMultiplicationTable();
 
 static uint8_t add(uint8_t a, uint8_t b);

@@ -1,15 +1,10 @@
 /*
-  8-bit Galois field
-  Copyright 2018, Jeffrey Takahashi
-*/
+//8-bit Galois Field
 
-/*
-  8-bit Galois Field
+//This implements multiplication, division, addition,
+//subtraction, and exponentiation.
 
-  Thisimplements multiplication, division, addition,
-  subtraction, and exponentiation.
-
-  See notes in original Backblaze, Inc. docs
+//See notes in original Backblaze, Inc. docs
 */
 
 #include "galois.h"
@@ -20,21 +15,21 @@
 //probably more
 
 /*
-  Adds two elements in a field
+//Adds two elements in a field
 */
 static uint8_t add(uint8_t a, uint8_t b){
 	return (uint8_t) (a ^ b);
 }
 
 /*
-  Inverse of add
+//Inverse of add
 */
 static uint8_t subtract(uint8_t a, uint8_t b){
 	return (uint8_t) (a ^ b);
 }
 
 /*
-  Multiply two elements in a field
+//Multiply two elements in a field
 */
 static uint8_t multiply(uint8_t a, uint8_t b){
 	//Mult by zero
@@ -48,7 +43,7 @@ static uint8_t multiply(uint8_t a, uint8_t b){
 }
 
 /*
-  Inverse of multiply
+//Division, i.e. inverse of multiply
 */
 static uint8_t divide(uint8_t a, uint8_t b){
 	if(a == 0){
@@ -62,6 +57,9 @@ static uint8_t divide(uint8_t a, uint8_t b){
 	}
 }
 
+/*
+	
+*/
 static uint8_t exponent(uint8_t a, int n){
 	if(n == 0){
 		return 1;
@@ -73,7 +71,32 @@ static uint8_t exponent(uint8_t a, int n){
 		//log and exp table stuff
 	}
 }
+
+/*
 //generate log table
-//generate exp table
-//generate mult table
+*/
+
+
+/*
+//generate exp tablea
+*/
+
+
+/*
+//generate multiplication table
+*/
+static uint8_t ** generateMultiplicationTable(){
+	//byte [][] result = new byte [256] [256];
+	uint8_t * thing = malloc(stuff);
+	uint8_t ** result = malloc(stuff);
+
+	for(int i = 0; i < FIELD_SIZE; a++){
+		for(int j = 0; j < FIELD_SIZE; j++){
+			//result[a][b] = multiply(uint8_t a, uint8_t b);
+		}
+	}
+
+	return result;
+}
+
 //generate all possible polynomials
