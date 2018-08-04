@@ -16,7 +16,7 @@ typedef struct {
 	static int rows;
 	static int columns;
 	static matrix_byte data;
-} matrix;
+} Matrix;
 
 typedef struct {
 	uint8_t* d;
