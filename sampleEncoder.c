@@ -15,16 +15,11 @@
 */
 
 #include <stdio.h>
-
-
-static const int DATA_SHARDS = 4;
-static const int PARITY_SHARDS = 2;
-static const int TOTAL_SHARDS = 6;
-static const int BYTES_IN_INT = 4;
+#include "params.h"
 
 void main(int argc, char ** argv){
 
-	FILE * fp;
+	FILE * inpf;
 
 	//validate and parse input
 	if(argc != 2){
@@ -33,7 +28,7 @@ void main(int argc, char ** argv){
 	}
 
 	//maybe validate file because proper, but effort
-	fp = fopen(argv[1], "r");
+	inpf = fopen(argv[1], "r");
 
 	//Find size of file
 	//const int filesize = (int) fp.length;
@@ -44,4 +39,16 @@ void main(int argc, char ** argv){
 	//const int shardSize = (storedSize + DATA_SHARDS - 1) / DATA_SHARDS;
 
 	//to be cont...
+
+	//Use RS to calculate parity
+
+	//write the resulting files
+	for(int i = 0; i < TOTAL_SHARDS; i++){
+		FILE * outpf;
+		//more
+		//things
+		//here
+
+		
+	}
 }
