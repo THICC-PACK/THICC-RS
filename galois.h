@@ -1,14 +1,9 @@
 /*
 //8-bit Galois field
-//Copyright 2018, Jeffrey Takahashi
-*/
-
-/*
-//8-bit Galois Field
-
+//
 //Thisimplements multiplication, division, addition,
 //subtraction, and exponentiation.
-
+//
 //See notes in original Backblaze, Inc. docs
 */
 

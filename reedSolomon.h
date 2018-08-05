@@ -5,6 +5,9 @@
 //
 */
 
+#ifndef REED_SOLOMON_H
+#define REED_SOLOMON_H
+
 struct reedSolomon{
 	const int dataShardCount;
 	const int parityShardCount;
