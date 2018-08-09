@@ -14,7 +14,7 @@
 /*
 //Number of elements in the field
 */
-static int field_size = 256;
+static const int field_size = 256;
 
 /*
 //The polynomial used to generate the log table.
@@ -26,7 +26,7 @@ static int field_size = 256;
 //The possibilities are 29, 43, 45, 77, 95, 99, 101,
 //105, 113, 135, 141, 169, 195, 207, 231, and 245.
 */
-static int generating_polynomial = 29;
+static const int generating_polynomial = 29;
 /*
 //Mapping from members of the Galois Field to their integer logarithims.
 //The entry for 0 is meaningless because there is no log of 0.
@@ -38,7 +38,7 @@ static int generating_polynomial = 29;
 //This table was copied from Backblaze, Inc. who generated it with
 //java_tables.py.
 */
-static int16_t log_table[] = {
+static const short log_table[] = {
 	-1,    0,    1,   25,    2,   50,   26,  198,
 	3,  223,   51,  238,   27,  104,  199,   75,
 	4,  100,  224,   14,   52,  141,  239,  129,
@@ -80,7 +80,7 @@ static int16_t log_table[] = {
 //This table copied from Backblaze, Inc. who generated it from 
 //java_tables.py
 */
-static short uint8_t exp_table[] = {
+static const uint8_t exp_table[] = {
 	1,    2,    4,    8,   16,   32,   64, -128,
 	29,   58,  116,  -24,  -51, -121,   19,   38,
 	76, -104,   45,   90,  -76,  117,  -22,  -55,
