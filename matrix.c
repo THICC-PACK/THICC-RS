@@ -8,6 +8,9 @@
 //The original implementation explicitly was not built for
 //performance. Expect heavy editing later.
 
+//Documentation is copied from or adapted from original Backblaze, Inc. documentation.
+//All credit and my thanks to them for their work.
+
 #include "matrix.h"
 
 //matrix init for default

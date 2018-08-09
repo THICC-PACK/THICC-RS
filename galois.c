@@ -4,7 +4,9 @@
 //This implements multiplication, division, addition,
 //subtraction, and exponentiation.
 
-//See notes in original Backblaze, Inc. docs
+//See notes in original Backblaze, Inc. docs. Much of the documentation
+//below is copied or adapted from original Backblaze docs. All credit
+//and my thanks to them for their work.
 
 //Copyright (c) 2018, Jeffrey Takahashi.
 */
