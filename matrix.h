@@ -1,6 +1,7 @@
 /*
 //Matrix algebra over an 8-bit Galois field
 //
+//Copyright (c) 2018, Jeffrey Takahashi
 */
 
 //Matrix over 8-bit Galois field

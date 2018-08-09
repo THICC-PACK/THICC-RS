@@ -23,3 +23,8 @@ Key Conversion Considerations:
 The final goal is to produce a functional C implementation of the repo found above. Pure
 functionality is the goal for the term, with an emphasis on self-documentation, understanding,
 and style. Time permitting, groundwork will be laid for real optimizations.
+
+
+
+Thank you for visiting and if you need to reach out to me please find me at jeffrey(dot)takahashi
+@gmail.

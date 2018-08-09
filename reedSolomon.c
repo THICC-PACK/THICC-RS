@@ -1,6 +1,7 @@
 /*
 //Reed-Solomon Coding over 8-bit values
 //
+//Copyright (c) 2018, Jeffrey Takahashi
 */
 
 #include "reedSolomon.h"

@@ -1,5 +1,7 @@
 /*
 //Global Params to be used
+//
+//Copyright (c) 2018, Jeffrey Takahashi
 */
 
 static const int DATA_SHARDS = 4;

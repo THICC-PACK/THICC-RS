@@ -5,6 +5,8 @@
 //subtraction, and exponentiation.
 //
 //See notes in original Backblaze, Inc. docs
+//
+//Copyright (c) 2018, Jeffrey Takahashi
 */
 
 /*

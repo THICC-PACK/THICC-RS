@@ -1,6 +1,8 @@
 /*
 //sampleEncoder.c
 //
+//Copyright (c) 2018, Jeffrey Takahashi
+//
 //Command line program to encode one file using Reed-Solomon 4+2
 //
 //One argument should be file name (ex. "bar.txt"). This program
